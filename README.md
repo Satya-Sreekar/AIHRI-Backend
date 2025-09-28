@@ -44,15 +44,24 @@ A Django REST API with Swagger/OpenAPI documentation that integrates with AWS Be
 
 ## Running the Application
 
-1. **Start the Django development server:**
-   ```bash
-   python manage.py runserver
-   ```
+### Option 1: Local Access Only (localhost)
+```bash
+python manage.py runserver
+```
+- Accessible only from localhost: http://localhost:8000/api/
 
-2. **Access the API:**
-   - API Base URL: http://localhost:8000/api/
-   - Swagger Documentation: http://localhost:8000/api/docs/
-   - ReDoc Documentation: http://localhost:8000/api/redoc/
+### Option 2: Network Access (0.0.0.0) - Recommended
+```bash
+python start_server.py
+```
+- Accessible from all network interfaces: http://0.0.0.0:8000/api/
+- Allows access from other devices on your network
+- Perfect for testing with mobile devices or other computers
+
+### Access URLs:
+- **API Base URL**: http://0.0.0.0:8000/api/ (or http://localhost:8000/api/)
+- **Swagger Documentation**: http://0.0.0.0:8000/api/docs/
+- **ReDoc Documentation**: http://0.0.0.0:8000/api/redoc/
 
 ## API Endpoints
 
